@@ -1,0 +1,49 @@
+
+.rc-table{
+    width: 100%;
+    text-align: left;
+    border-radius: 2px 2px 0 0;
+    border-spacing: 0;
+}
+
+.rc-table-thead-th{
+    color: rgba(0,0,0,.85);
+    background-color:#fafafa;
+    font-weight: 500;
+    padding: 16px;
+    text-align: left;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.rt-table-tbody-td{
+    border-bottom: 1px solid #f0f0f0;
+    padding: 12px 8px;
+    color: rgba(0,0,0,.65);
+}
+
+
+.rt-input{
+    width: 500px;
+    box-sizing: border-box;
+    margin: 0;
+    list-style: none;
+    font-size: 16px;
+    border: 1px solid #d9d9d9;
+    height: 40px;
+    padding:  6px 12px;
+}
+
+.rt-input:hover{
+    border-color: rgb(255, 0, 0);
+}
+
+.rt-input-search-btn{
+    background-color:rgb(255, 0, 0);
+    color: #fff;
+    height: 40px;
+    padding: 6px 15px;
+    font-size: 16px;
+    border-radius: 2px;
+}
+
+
