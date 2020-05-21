@@ -1,5 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import PropTypes from 'prop-types';
+import './index.css'
+import './table.css'
+import './input.css'
 
 class App extends React.Component{
 
@@ -207,16 +211,23 @@ class ReactInput extends React.Component{
   
 
   render(){
-    const {value} = this.state;
-      return (
-      <span>
-        <input placeholder="请输入内容" type="text" className="rt-input" value={this.state.value} 
-        onKeyDown={this.onKeyDownEvent} onChange={this.onChangeEvent}></input>
-        <button className="rt-input-search-btn" onClick={this.onClickEvent}>搜索</button>
-        <span>{this.state.value}</span>
-      </span> 
-      )
-    }
+
+    return (
+      <div>
+        <div style={{
+          textAlign:'center',
+          marginTop:20,
+          paddingBottom:20
+        }}>
+        <ReactInput 
+          onSearch={this.onSearch}
+          onClick={this.onSearch}
+        />
+        </div>
+        <ReactTable dataSource={this.state.dataSource} columns={this.columns}/>
+      </div>
+    )
+  }   
 
 }
 

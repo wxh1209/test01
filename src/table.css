@@ -1,0 +1,21 @@
+.rc-table{
+    width: 100%;
+    text-align: left;
+    border-radius: 2px 2px 0 0;
+    border-spacing: 0;
+}
+
+.rc-table-thead-th{
+    color: rgba(0,0,0,.85);
+    background-color:#fafafa;
+    font-weight: 500;
+    padding: 16px;
+    text-align: left;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.rt-table-tbody-td{
+    border-bottom: 1px solid #f0f0f0;
+    padding: 12px 8px;
+    color: rgba(0,0,0,.65);
+}
