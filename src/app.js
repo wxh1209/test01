@@ -121,21 +121,21 @@ class ReactTable extends React.Component{
  
 
   getTable = () => {
-    const {collumns,dataSource} = this.props;   
+    const {columns,dataSource} = this.props;   
     return (
          <table className="rc-table">
-           {this.getHeadTable(collumns)}
-           {this.getBodyTable(collumns,dataSource)}
+           {this.getHeadTable(columns)}
+           {this.getBodyTable(columns,dataSource)}
          </table>
        )
   }
 
-  getHeadTable = (collumns) => {
+  getHeadTable = (columns) => {
         return (
           <thead>
           <tr>
             {/* {collumns && Array.isArray(collumns) && collumns.map((item)=>{ */}
-            {collumns && collumns.length>0 && collumns.map((item)=>{
+            {columns && columns.length>0 && columns.map((item)=>{
               return (<th key={item.key} className="rc-table-thead-th">{item.title}</th>)
             })}
           </tr>
@@ -143,14 +143,14 @@ class ReactTable extends React.Component{
         )
   }
 
-  getBodyTable = (collumns,dataSource) => {
+  getBodyTable = (columns,dataSource) => {
        return (
          <tbody>
            
            {  dataSource && dataSource.length>0 && dataSource.map((item)=>{
                     return (
                         <tr key={item.id}>
-                            {collumns.map((colItem)=>{
+                            {columns.map((colItem)=>{
                             return ( <td key={colItem.key+item.id} className="rt-table-tbody-td">{item[colItem.dataIndex]}</td>)     
                             })}
                     </tr>
@@ -171,10 +171,10 @@ class ReactTable extends React.Component{
 //   collumns : PropTypes.array.isRequired
 // }
 
-ReactTable.defaultProps={
-  dataSource : [],
-  collumns : []
-}
+// ReactTable.defaultProps={
+//   dataSource : [],
+//   collumns : []
+// }
 
 
 
